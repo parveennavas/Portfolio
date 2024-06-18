@@ -1,13 +1,97 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+   .marquee {
+       overflow: hidden;
+       font-family: "Pridi", sans-serif;
+       font-weight: 600;
+       font-size: 24px;
+       text-transform: uppercase;
+       
+     }
+    
+     .marquee__inner {
+       display: flex;
+     }
+    
+     .marquee__line {
+       flex-shrink: 0;
+       margin: 0;
+       padding: 10px 15px;
+       min-width: 100%;
+       white-space: nowrap;
+       animation-name: marqueeLine;
+       animation-duration: 12s;
+       animation-timing-function: ease-in-out;
+       animation-iteration-count: infinite;
+       letter-spacing: 3px;
+     }
+    
+     @keyframes marqueeLine {
+       from {
+         transform: translateX(0);
+       }
+      
+       to {
+         transform: translateX(-100%);
+       }
+     }
+/* 
+.flip {
+  transition: transform 1s;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.flip.rotate {
+  transform: rotateY(180deg);
 }
+
+.slide-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s, transform 1.5s;
+}
+
+.slide-in.show {
+  opacity: 1;
+  transform: translateY(0);
+} */
+
+/*.vehicle-card {
+  width: 90%;
+
+  perspective: 1000px;
+
+
+  position: relative;
+}
+
+.vehicle-card.is-flipped .front {
+  transform: rotateY(180deg);
+}
+
+.vehicle-card.is-flipped .back {
+  transform: rotateY(0deg);
+}
+
+.vehicle-card .front,
+.vehicle-card .back {
+  width: 100%;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+}
+
+.vehicle-card .front {
+  z-index: 2;
+}
+
+.vehicle-card .back {
+  transform: rotateY(-180deg); 
+  z-index: 1;
+   
+*/

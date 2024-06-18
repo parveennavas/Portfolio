@@ -1,0 +1,71 @@
+.about {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .abtcont {
+    position: absolute;
+    right: 100px;
+    display: flex;
+    padding: 4rem;
+    font-size: large;
+    font-weight: 100;
+    flex-direction: column;
+  }
+  
+  .abouthead {
+    margin-top: 5rem;
+    font-size: 4rem;
+    font-weight: 300;
+    top: 50px;
+  }
+  
+  .me {
+    color: yellow;
+  }
+  
+  .bgimg {
+    position: absolute;
+    bottom: 0;
+    left: 2rem;
+    object-fit: cover;
+    height: 80vh;
+    width: 70vh;
+    z-index: -1;
+  }
+  
+  .icons {
+    margin-right: 3rem;
+    height: 150px;
+    color: white; /* Ensures all icons are white */
+  }
+  
+  .icon {
+    display: flex;
+
+    margin: 3rem;
+    color: white;
+  }
+  
+  .icon a {
+    color: white; /* Ensures the icons within the anchor tags are white */
+  }
+  @media screen and (max-width:840px) {
+    .abtcont {
+        position: absolute;
+        right: 10px;
+        top:10px;
+        
+      
+      }
+      .bgimg {
+        position: absolute;
+        bottom: -100px;
+        left: 7rem;
+        object-fit: cover;
+        height: 65vh;
+        width: 70vh;
+        z-index: -1;
+      }
+  }
